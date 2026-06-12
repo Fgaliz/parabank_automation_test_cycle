@@ -17,7 +17,9 @@ jobs:
       with:
         node-version: lts/*
     - name: Create folder and write JSON
-      run: mkdir -p ./playwright/.auth
+      run: |
+       mkdir -p ./playwright/.auth
+       echo '{}' > ./playwright/.auth/user.json
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
