@@ -16,6 +16,8 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+    - name: Create folder and write JSON
+      run: mkdir -p ./playwright\.auth
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
